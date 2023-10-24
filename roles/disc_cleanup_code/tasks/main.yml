@@ -1,0 +1,7 @@
+---
+# tasks file for disc_cleanup on windows
+#- name: "Setup pre-requisites for disc_cleanup on windows"
+#  ansible.builtin.include_tasks: pre_req.yml
+
+- name: Disc cleanup
+  include_tasks: disc_clean_up.yml
