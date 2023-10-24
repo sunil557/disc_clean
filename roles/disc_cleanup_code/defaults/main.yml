@@ -8,9 +8,9 @@ pre_req_failure: "13001"
 disc_cleanup_failure: "13002"
 
 # share admin
-ansible_user: 'sunil.varma'
-password: 'Welcome@1'
-drive_letter: 'P:\'
+#ansible_user: 'sunil.varma'
+#password: 'Welcome@1'
+#drive_letter: 'P:\'
 #source_path: "\\DERUSUSRFL003.ey.net\003RUU10030\N\NADD_Files\_Data_transfer"
 
 source_path: 'C:\ey_config'
