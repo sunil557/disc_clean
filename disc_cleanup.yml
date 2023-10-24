@@ -1,20 +1,19 @@
 ---
 - name: "Configuring socks tunnel setup"
-  hosts: localhost
+  hosts: all
   connection: local
   tasks:
     # Calling socks tunnel role if we have windows endpoint
-    - name: "Role ensures that the socks tunnel is setup"
-      ansible.builtin.import_role:
-        name: ansible-role-event-socks-tunnel
-      vars:
-        acc_id: "{{ blueid_shortcode }}"
-        transaction_id: "{{ tower_job_id }}"
+    # - name: "Role ensures that the socks tunnel is setup"
+    #   ansible.builtin.import_role:
+    #     name: ansible-role-event-socks-tunnel
+    #   vars:
+    #     acc_id: "{{ blueid_shortcode }}"
+    #     transaction_id: "{{ tower_job_id }}"
 
 - name: "execute disc_cleanup on windows remote endpoint"
   hosts: all
   gather_facts: false
   gather_subset: ['env','!all','!min']
   roles:
-#    - disc_cleanup_script
     - disc_cleanup_code
